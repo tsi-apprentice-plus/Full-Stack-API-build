@@ -32,7 +32,6 @@ export async function getLocationData(dataID:string):Promise<LocationData>{
     return res.json() as Promise<LocationData>
 }
 
-// http://localhost:3000/CharDatapage/Aragorn
 export async function getAragornData():Promise<CharData>{
     const res =await fetch('http://localhost:8080/chars/Aragorn')
 

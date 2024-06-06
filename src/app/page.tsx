@@ -53,18 +53,20 @@ export default function Home() {
       <button data-testId="button 2">
         Connect to Database
       </button>
+      <Link href={'/LocationData'} passHref>
       <button data-testId="button 3">
-        Connect to Database
+        Look up Location
       </button>
+      </Link>
       <button data-testId="button 4">
       Database restart
       </button>
       <button data-testId="button 5">
         Navigate to Database display
       </button>
-<Link href = {`/CharDatapage/Aragorn`} passHref>
-<button>Aragorn Details</button>
-</Link>
+      <Link href = {`/CharDatapage/Aragorn`} passHref>
+      <button>Aragorn Details</button>
+      </Link>
     </main>
   );
 }

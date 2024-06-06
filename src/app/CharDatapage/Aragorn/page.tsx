@@ -22,8 +22,6 @@ return(
 <p>
 Name: {data.name} <br/>
 Locations Desired to Visit:
-
-
 {String(data.LocationDesired)} <br/>
 Locations Visited:
 {String(data.LocationsVisited)}<br/>
