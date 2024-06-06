@@ -1,3 +1,5 @@
+
+
 export interface CharData{
 name:string,
 LocationsVisited:[Number],
