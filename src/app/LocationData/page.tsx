@@ -32,7 +32,7 @@ export default function Home(){
         <div>
         <h1>Location data Finder</h1>
         <LocationForm handleSubmit={handleSubmit} />
-        <Link href={'[Location]'} passHref>
+        <Link href={`/LocationData/${Location}`} passHref>
         <button>
             Look up Location Page
         </button>
