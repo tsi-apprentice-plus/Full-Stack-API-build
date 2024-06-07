@@ -10,6 +10,7 @@ interface PageProps{
 }
 
 function LocationDisplay({ data }:LocationDisplayProps){
+if (data !== null){
 console.log(data) 
     return(
     <div>   
@@ -22,6 +23,10 @@ console.log(data)
     </p>
     </div>
     )}
+    else{
+    return(
+    <h1>Data Not Found</h1>)
+    }}
 
 export default async function Home({ params }:PageProps){
 const data = await getLocationData(params.Location)

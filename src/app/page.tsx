@@ -65,7 +65,7 @@ export default function Home() {
         Navigate to Database display
       </button>
       <Link href = {`/CharDatapage/Aragorn`} passHref>
-      <button>Aragorn Details</button>
+      <button data-testOd="AaragonButton">Aragorn Details</button>
       </Link>
     </main>
   );
