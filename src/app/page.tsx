@@ -30,8 +30,8 @@ import ConcerningHobbits from '/public/Images/ConcerningHobbits.jpg'
 export default function Home() {
 
   return (
-    <main>
-      <div>
+    <main id="MainPage"> 
+    <div>
     <h1> Welcome to the LOTR travel Bucket List</h1>
     <p> This should list where characters have been and where they desire to go</p>
     <Image
@@ -58,14 +58,16 @@ export default function Home() {
         Look up Location
       </button>
       </Link>
+      <Link href={`/ModifyDataPage`}>
       <button data-testId="button 4">
-      Database restart
+      Character Data Adjustment
       </button>
+      </Link>
       <button data-testId="button 5">
         Navigate to Database display
       </button>
       <Link href = {`/CharDatapage/Aragorn`} passHref>
-      <button data-testOd="AaragonButton">Aragorn Details</button>
+      <button data-testId="AaragonButton">Aragorn Details</button>
       </Link>
     </main>
   );
