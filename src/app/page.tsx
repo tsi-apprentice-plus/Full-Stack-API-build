@@ -2,6 +2,7 @@ import Image from "next/image";
 import {useRouter} from 'next/router'
 import Link from 'next/link'
 import { useState } from "react";
+import { navBar } from "./Navbar";
 // import { env } from "process";
  
 // import styles from "./page.module.css";
@@ -33,7 +34,10 @@ export default function Home() {
     <main id="MainPage"> 
     <div>
     <h1> Welcome to the LOTR travel Bucket List</h1>
-    <p> This should list where characters have been and where they desire to go</p>
+    <p>
+    This website lists characters in the database <br/>
+    it will list the locations that have been visted and where they desire to go
+    </p>
     <Image
       src={ConcerningHobbits}
       width={500}
@@ -42,30 +46,35 @@ export default function Home() {
       />
       </div>
 
-      <h1>Search Bar</h1>
+      <h1>Menu</h1>
       {/* <SearchBar/> */}
+      <navBar />
 
-
-
+    
       <button data-testId="button 1">
-        Connect to Database
+      TEST BUTTON
       </button>
+      <br/>
       <button data-testId="button 2">
-        Connect to Database
+      TEST BUTTON 2
       </button>
+      <br/>
       <Link href={'/LocationData'} passHref>
       <button data-testId="button 3">
         Look up Location
       </button>
       </Link>
+      <br/>
       <Link href={`/ModifyDataPage`}>
       <button data-testId="button 4">
       Character Data Adjustment
       </button>
       </Link>
+      <br/>
       <button data-testId="button 5">
         Navigate to Database display
       </button>
+      <br/>
       <Link href = {`/CharDatapage/Aragorn`} passHref>
       <button data-testId="AaragonButton">Aragorn Details</button>
       </Link>
