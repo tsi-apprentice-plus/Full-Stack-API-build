@@ -108,10 +108,28 @@ AC8968
 A69080 */
 
 main{
-  background-image: linear-gradient(#d8af83,#865D36) ;
+  background-image: linear-gradient(#d8af83,#492f17) ;
   h1{
     font-family:fantasy
   }
   p{font-family: serif}
+
+  image{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }
+  navbar{
+    display:block;
+    margin-left: auto;
+    width:20%;
+
+    position: relative;
+    position: absolute;
+    position: sticky;
+    position: fixed;
+    left: 0px;
+  }
 }
 

@@ -46,9 +46,9 @@ export default function Home(){
             Delete data
         </button>
         
-        <Link href = {`/ModifyDataPage/CreateChar/`} passHref>
+        <Link href = {`/ModifyDataPage/CreateLocation/`} passHref>
         <button>
-            Create Data
+            Create Location
         </button>
         </Link>
         

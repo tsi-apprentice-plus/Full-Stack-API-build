@@ -1,5 +1,7 @@
 import { getAragornData } from "../../APIFunctions";
 import { CharData } from "../../APIFunctions";
+import { NavBar } from "@/app/Navbar"; 
+import React from "react";
 export default async function Home() {
     const data = await getAragornData()
 
@@ -7,7 +9,9 @@ export default async function Home() {
         <div>
             <h1>Aragorn&apos;s data</h1>
             <CharDisplay data={data} />
+            <NavBar/>
         </div>
+        
     )
 }
 

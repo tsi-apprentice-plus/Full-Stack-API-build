@@ -1,5 +1,7 @@
 import { getCharData } from "@/app/APIFunctions";
 import { CharData } from "@/app/APIFunctions";
+import { NavBar } from "@/app/Navbar";
+import React from "react";
 interface CharDisplayProps {
   data: CharData;
 }
@@ -50,6 +52,7 @@ export default async function Home({ params }: PageProps) {
         Characters Race
         {oneRingApiData.docs[0].race}
       </p>
+      <NavBar/>
     </div>
   );
 }

@@ -1,5 +1,7 @@
 import { getLocationData } from "@/app/APIFunctions";
 import { LocationData } from "@/app/APIFunctions";
+import { NavBar } from "@/app/Navbar"; 
+import React from "react";
 interface LocationDisplayProps{
     data:LocationData
 }
@@ -30,7 +32,9 @@ console.log(data)
 
 export default async function Home({ params }:PageProps){
 const data = await getLocationData(params.Location)
-return(
+return(<div>
 <LocationDisplay data={data}/>
+<NavBar/>
+</div>
 )
 }

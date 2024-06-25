@@ -1,8 +1,10 @@
 import Image from "next/image";
+import React from "react";
 import {useRouter} from 'next/router'
 import Link from 'next/link'
 import { useState } from "react";
-import { navBar } from "./Navbar";
+import { NavBar } from "./Navbar";
+import { Component } from "react";
 // import { env } from "process";
  
 // import styles from "./page.module.css";
@@ -46,11 +48,8 @@ export default function Home() {
       />
       </div>
 
-      <h1>Menu</h1>
-      {/* <SearchBar/> */}
-      <navBar />
-
-    
+      <NavBar/>
+      <br/>
       <button data-testId="button 1">
       TEST BUTTON
       </button>
