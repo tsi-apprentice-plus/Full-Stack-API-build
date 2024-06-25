@@ -6,12 +6,13 @@ export default async function Home() {
     const data = await getAragornData()
 
     return (
+        <main>
         <div>
             <h1>Aragorn&apos;s data</h1>
             <CharDisplay data={data} />
             <NavBar/>
         </div>
-        
+        </main>
     )
 }
 

@@ -46,6 +46,7 @@ export default async function Home({ params }: PageProps) {
   const data = await getCharData(params.Char);
   const oneRingApiData = await OneRingApi(params.Char);
   return (
+    <main>
     <div>
       <CharDisplay data={data} />
       <p>
@@ -54,5 +55,6 @@ export default async function Home({ params }: PageProps) {
       </p>
       <NavBar/>
     </div>
+    </main>
   );
 }

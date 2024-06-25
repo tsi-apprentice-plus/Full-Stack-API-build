@@ -3,6 +3,7 @@ import { useState } from "react"
 import { MouseEvent } from "react";
 import Link from "next/link";
 import { deleteCharsData } from "../APIFunctions";
+import { NavBar } from "../Navbar";
 interface FormProps{
     handleSubmit:(location:string)=>void
 }
@@ -37,25 +38,28 @@ export default function Home(){
   
 
     return(
+        <main>
+        <NavBar/>
         <div>
         <h1>Character Data </h1>
         <p>The name currently Logged to adjust is {Data}</p>
-        <DataForm handleSubmit={handleSubmit}/>
+        <DataForm handleSubmit={handleSubmit}/> <br/>
 
         <button onClick={handleMouseEventDelete}>
             Delete data
-        </button>
+        </button><br/>
         
         <Link href = {`/ModifyDataPage/CreateLocation/`} passHref>
         <button>
             Create Location
         </button>
-        </Link>
+        </Link><br/>
         
         <Link href = {`/ModifyDataPage/CharRetrieve/${Data}`} passHref>
         <button data-testId="View Character">Char Details</button>
         </Link>
         
         </div>
+        </main>
     )
 }

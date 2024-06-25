@@ -32,9 +32,12 @@ console.log(data)
 
 export default async function Home({ params }:PageProps){
 const data = await getLocationData(params.Location)
-return(<div>
+return(
+<main>
+<div>
 <LocationDisplay data={data}/>
 <NavBar/>
 </div>
+</main>
 )
 }

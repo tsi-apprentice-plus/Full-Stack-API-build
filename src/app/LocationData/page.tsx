@@ -1,8 +1,11 @@
 'use client'
-import Link from 'next/link'
 
-import { getLocationData } from "../APIFunctions";
-import { useState, useEffect } from "react";
+import LOTRMap from '/public/Images/LOTRMap.jpg'
+import Image from "next/image";
+import React from "react";
+import Link from 'next/link'
+import { useState } from "react";
+
 interface LocationFormProps{
     handleSubmit:(location:string)=>void
 }
@@ -29,14 +32,24 @@ export default function Home(){
 
 
     return(
+        <main>
         <div>
         <h1>Location data Finder</h1>
         <LocationForm handleSubmit={handleSubmit} />
+        <br/>
         <Link href={`/LocationData/${Location}`} passHref>
         <button>
             Look up Location Page
         </button>
         </Link>
+        <br/><br/>
+        <Image className="PageImage"
+      src={LOTRMap}
+      width={400}
+      height={400}
+      alt="Middle Earth Map"
+      />
         </div>
+        </main>
     )
 }

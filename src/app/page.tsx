@@ -14,41 +14,25 @@ import { Component } from "react";
 //Importing art assests
 import ConcerningHobbits from '/public/Images/ConcerningHobbits.jpg'
 
-
-// function SearchBar(){
-//   let newName ="";
-//   let  name= "";
-// const handleSubmit = (event: React.SyntheticEvent) => {
-//   event.preventDefault();
-//   console.log(name)
-//   }
-// return(
-// <form onSubmit={handleSubmit} data-testid="NameInputTextBox" >
-//   <input type="text" value={newName}
-//   onChange={(e) => name=(e.target.value)}/>
-//   <input type = "submit" value="Search Name"/>
-// </form>
-// ) 
-// }
 export default function Home() {
 
   return (
     <main id="MainPage"> 
-    <div>
     <h1> Welcome to the LOTR travel Bucket List</h1>
     <p>
     This website lists characters in the database <br/>
     it will list the locations that have been visted and where they desire to go
     </p>
-    <Image
+    <div className="frontPageNav">
+    <NavBar/>
+    <Image className="frontPageImage"
       src={ConcerningHobbits}
-      width={500}
-      height={500}
+      width={400}
+      height={400}
       alt="Concerning Hobbits"
       />
       </div>
 
-      <NavBar/>
       <br/>
       <button data-testId="button 1">
       TEST BUTTON

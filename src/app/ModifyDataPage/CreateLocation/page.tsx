@@ -13,6 +13,7 @@ function DataForm({ handleSubmit }: FormProps) {
   const [newLocation, setNewLocation] = useState("");
   const [newLocationDesired, setNewLocationDesired] = useState("");
   return (
+  
     <form
       onSubmit={(e) => {
         e.preventDefault();
@@ -86,10 +87,12 @@ export default function Home() {
   };
 
   return (
+    <main>
     <div>
       <DataForm handleSubmit={handleSubmit} />
       <button onClick={handleMouseEventCreate}>Create data</button>
       <NavBar/>
     </div>
+    </main>
   );
 }
