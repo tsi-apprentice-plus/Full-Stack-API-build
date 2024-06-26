@@ -35,7 +35,7 @@ async function OneRingApi(name: string) {
   console.log(name);
   return fetch(`https://the-one-api.dev/v2/character?name=/${data}/i`, {
     headers: {
-      Authorization: `bearer 45N72miQ8RS919kva9sc`,
+      Authorization: `bearer `,
     },
     redirect:"follow"
   }).then((res) => res.json());
