@@ -5,11 +5,6 @@ import Link from 'next/link'
 import { useState } from "react";
 import { NavBar } from "./Navbar";
 import { Component } from "react";
-// import { env } from "process";
- 
-// import styles from "./page.module.css";
-
-//Importing database function
 
 //Importing art assests
 import ConcerningHobbits from '/public/Images/ConcerningHobbits.jpg'
