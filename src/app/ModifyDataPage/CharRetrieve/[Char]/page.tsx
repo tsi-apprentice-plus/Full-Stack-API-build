@@ -19,7 +19,7 @@ function CharDisplay({ data }: CharDisplayProps) {
         <p>
           Name: {data.name} <br />
           Location&apos;s Visited:
-          {data.LocationsVisited} <br />
+          {data.LocationsVisited.toString()} <br />
           Location&apos;s Desired:
           {data.LocationDesired}
           <br />
@@ -52,9 +52,9 @@ export default async function Home({ params }: PageProps) {
       <CharDisplay data={data} />
       <p>
         Character's Race : 
-        {oneRingApiData.docs[0].race}
-        Character's Quote
-        {/* {oneRingApiData.docs[0].quote[0]} */}
+        {oneRingApiData.docs[0].race}<br/>
+        Character's WikiPage <br/>
+        {oneRingApiData.docs[0].wikiUrl}
       </p>
       <NavBar/>
     </div>
