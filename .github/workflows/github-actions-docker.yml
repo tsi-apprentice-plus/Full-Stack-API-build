@@ -29,14 +29,7 @@ jobs:
           file: Dockerfile
           push: true
           tags: ghcr.io/tizzer1331/lotrapifrontend:latest
-      # - name: Build and push Docker image
-      #   uses: docker/build-push-action@v5
-      #   with:
-      #     context: ./newAPI/.
-      #     platforms: linux/amd64,linux/arm64
-      #     file: newAPI/Dockerfile
-      #     push: true
-      #     tags: ghcr.io/nmcc1212/social-api:v1, ghcr.io/nmcc1212/social-api:latest
-      #     cache-from: type=gha
-      #     cache-to: type=gha
- 
+- name: Jenkins
+        run: |
+          CRUMB=$(curl -u ash:{{secrets.JENKINS_API_TOKEN}} -s 'https://jenkins.netbuildertraining.com/crumbIssuer/api/json' | grep -o '"crumb":"[^"]*"' | cut -d':' -f2 | tr -d '"')
+          curl -u ash:{{secrets.JENKINS_API_TOKEN}} -H "Jenkins-Crumb: $CRUMB" -X POST 'https://jenkins.netbuildertraining.com/job/https://jenkins.netbuildertraining.com/job/Jon-deployment-pipeline/build'/build'
