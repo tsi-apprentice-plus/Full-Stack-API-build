@@ -19,7 +19,7 @@ console.log(data)
     <p>
     Name: {data.name} <br/>
     Location&apos;s ID <br/>
-    {data.id}
+    {data.id}<br/>
     Location&apos;s Description:  
     {data.desc} <br/>
     Location&apos;s danger:  
