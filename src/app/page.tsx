@@ -34,32 +34,32 @@ export default function Home() {
       </div>
 
       <br/>
-      <button data-testId="button 1">
+      <button data-testid="button 1">
       TEST BUTTON
       </button>
       <br/>
-      <button data-testId="button 2">
+      <button data-testid="button 2">
       TEST BUTTON 2
       </button>
       <br/>
       <Link href={'/LocationData'} passHref>
-      <button data-testId="button 3">
+      <button data-testid="button 3">
         Look up Location
       </button>
       </Link>
       <br/>
       <Link href={`/ModifyDataPage`}>
-      <button data-testId="button 4">
+      <button data-testid="button 4">
       Character Data Adjustment
       </button>
       </Link>
       <br/>
-      <button data-testId="button 5">
+      <button data-testid="button 5">
         Navigate to Database display
       </button>
       <br/>
       <Link href = {`/CharDatapage/Aragorn`} passHref>
-      <button data-testId="AaragonButton">Aragorn Details</button>
+      <button data-testid="AaragonButton">Aragorn Details</button>
       </Link>
     </main>
   );

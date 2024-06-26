@@ -2,14 +2,12 @@ import { test, expect } from '@playwright/test';
 
 test('test', async ({ page }) => {
   await page.goto('http://localhost:3000/');
-  await page.getByTestId('button 3').click();
+  await page.getByRole('link', { name: 'Location Lookup' }).click();
   await page.getByRole('textbox').click();
-  await page.getByRole('textbox').fill('Blah');
-  page.once('dialog', dialog => {
-    console.log(`Dialog message: ${dialog.message()}`);
-    dialog.dismiss().catch(() => {});
-  });
+  await page.getByRole('textbox').fill('shire');
   await page.getByRole('button', { name: 'Check data' }).click();
   await page.getByRole('button', { name: 'Look up Location Page' }).click();
-  expect (page.getByRole('heading', { name: 'Data Not Found' }));
+  await page.getByRole('button', { name: 'Look up Location Page' }).click();
+  await page.getByRole('button', { name: 'Look up Location Page' }).click();
+  await page.goto('http://localhost:3000/');
 });
