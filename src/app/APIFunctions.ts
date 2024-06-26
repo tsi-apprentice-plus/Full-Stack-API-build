@@ -8,6 +8,7 @@ export interface LocationData {
     name: string;
     desc: string;
     danger: number;
+    id:number;
 }
 
 export async function getCharData(dataID: string): Promise<CharData> {

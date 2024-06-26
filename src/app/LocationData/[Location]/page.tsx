@@ -18,6 +18,8 @@ console.log(data)
     <div>   
     <p>
     Name: {data.name} <br/>
+    Location&apos;s ID <br/>
+    {data.id}
     Location&apos;s Description:  
     {data.desc} <br/>
     Location&apos;s danger:  
