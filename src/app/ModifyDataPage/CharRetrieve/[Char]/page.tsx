@@ -33,9 +33,9 @@ function CharDisplay({ data }: CharDisplayProps) {
 
 async function OneRingApi(name: string) {
   console.log(name);
-  return fetch(`https://the-one-api.dev/v2/character?name=/samwise/i`, {
+  return fetch(`https://the-one-api.dev/v2/character?name=/${data}/i`, {
     headers: {
-      Authorization: ``,
+      Authorization: `bearer 45N72miQ8RS919kva9sc`,
     },
     redirect:"follow"
   }).then((res) => res.json());
@@ -50,8 +50,10 @@ export default async function Home({ params }: PageProps) {
     <div>
       <CharDisplay data={data} />
       <p>
-        Characters Race
+        Character's Race : 
         {oneRingApiData.docs[0].race}
+        Character's Quote
+        {oneRingApiData.docs[0].quote[0]}
       </p>
       <NavBar/>
     </div>
