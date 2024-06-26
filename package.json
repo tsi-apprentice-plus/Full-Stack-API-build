@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@types/jest": "^29.5.12",
+    "dotenv": "^16.4.5",
     "mongoose": "^8.3.2",
     "next": "14.2.2",
     "prompt-sync": "^4.2.0",

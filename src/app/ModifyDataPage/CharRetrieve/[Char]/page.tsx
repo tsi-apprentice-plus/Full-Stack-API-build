@@ -32,10 +32,11 @@ function CharDisplay({ data }: CharDisplayProps) {
 }
 
 async function OneRingApi(name: string) {
+  const apiKey = process.env.REACT_APP_API_KEY??"";
   console.log(name);
-  return fetch(`https://the-one-api.dev/v2/character?name=/${data}/i`, {
+  return fetch(`https://the-one-api.dev/v2/character?name=/${name}/i`, {
     headers: {
-      Authorization: `bearer `,
+      Authorization: apiKey,
     },
     redirect:"follow"
   }).then((res) => res.json());
@@ -53,7 +54,7 @@ export default async function Home({ params }: PageProps) {
         Character's Race : 
         {oneRingApiData.docs[0].race}
         Character's Quote
-        {oneRingApiData.docs[0].quote[0]}
+        {/* {oneRingApiData.docs[0].quote[0]} */}
       </p>
       <NavBar/>
     </div>

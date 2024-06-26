@@ -5,6 +5,7 @@ import Link from 'next/link'
 import { useState } from "react";
 import { NavBar } from "./Navbar";
 import { Component } from "react";
+// require('dotenv').config();
 
 //Importing art assests
 import ConcerningHobbits from '/public/Images/ConcerningHobbits.jpg'
