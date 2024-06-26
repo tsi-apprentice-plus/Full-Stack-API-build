@@ -32,10 +32,7 @@ export default function Home(){
         e.preventDefault();
         console.log(Data)
         deleteCharsData(Data).then(()=>console.log("Deleted"))
-        console.log("bleh")
     }
-
-  
 
     return(
         <main>

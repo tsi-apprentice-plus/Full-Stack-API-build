@@ -41,7 +41,6 @@ async function OneRingApi(name: string) {
     redirect:"follow"
   }).then((res) => res.json());
 }
-// .then (oneRingData => console.log(oneRingData+ "Data from API"))
 
 export default async function Home({ params }: PageProps) {
   const data = await getCharData(params.Char);

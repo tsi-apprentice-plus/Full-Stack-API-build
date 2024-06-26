@@ -38,11 +38,9 @@ export async function getAragornData(): Promise<CharData> {
 }
 
 export async function deleteCharsData(dataID: string) {
-    console.log("Arkvoodle");
     const res = await fetch(`http://localhost:8080/chars/${dataID}`, {
         method: "DELETE",
     });
-    console.log("BLAH");
     if (!res.ok) {
         console.log("failed");
         throw new Error("Failed");
