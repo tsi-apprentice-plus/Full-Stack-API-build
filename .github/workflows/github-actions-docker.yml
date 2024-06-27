@@ -20,16 +20,13 @@ jobs:
         uses: docker/login-action@v3
         with:
           registry: ghcr.io
-          username: tizzer1331
-          password: ${{ secrets.GHCR_PAT }}
+          username: asharubendy
+          password: ${{ secrets.GHCR }}
+          
       - name: Build and push Docker image
         uses: docker/build-push-action@v5
         with:
           platforms: linux/amd64
           file: Dockerfile
           push: true
-          tags: ghcr.io/tizzer1331/lotrapifrontend:latest
-- name: Jenkins
-        run: |
-          CRUMB=$(curl -u ash:{{secrets.JENKINS_API_TOKEN}} -s 'https://jenkins.netbuildertraining.com/crumbIssuer/api/json' | grep -o '"crumb":"[^"]*"' | cut -d':' -f2 | tr -d '"')
-          curl -u ash:{{secrets.JENKINS_API_TOKEN}} -H "Jenkins-Crumb: $CRUMB" -X POST 'https://jenkins.netbuildertraining.com/job/https://jenkins.netbuildertraining.com/job/Jon-deployment-pipeline/build'/build'
+          tags: ghcr.io/asharubendy/lotrapifrontend:prod
