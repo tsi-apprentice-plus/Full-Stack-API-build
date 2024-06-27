@@ -12,7 +12,7 @@ export interface LocationData {
 }
 
 export async function getCharData(dataID: string): Promise<CharData> {
-    const res = await fetch(`http://localhost:8080/chars/${dataID}`);
+    const res = await fetch(`http://api.jon.netbuildertraining.com/chars/${dataID}`);
 
     if (!res.ok) {
         throw new Error("Failed to fetch Data of type ${dataID}");
@@ -21,7 +21,7 @@ export async function getCharData(dataID: string): Promise<CharData> {
 }
 
 export async function getLocationData(dataID: string): Promise<LocationData> {
-    const res = await fetch(`http://localhost:8080/locations/${dataID}`);
+    const res = await fetch(`http://api.jon.netbuildertraining.com/locations/${dataID}`);
 
     if (!res.ok) {
         throw new Error(`Failed to fetch Data of type ${dataID}`);
@@ -30,7 +30,7 @@ export async function getLocationData(dataID: string): Promise<LocationData> {
 }
 
 export async function getAragornData(): Promise<CharData> {
-    const res = await fetch("http://localhost:8080/chars/Aragorn");
+    const res = await fetch("http://api.jon.netbuildertraining.com/chars/Aragorn");
 
     if (!res.ok) {
         throw new Error("Failed to fetch Data of name Aragorn");
@@ -39,7 +39,7 @@ export async function getAragornData(): Promise<CharData> {
 }
 
 export async function deleteCharsData(dataID: string) {
-    const res = await fetch(`http://localhost:8080/chars/${dataID}`, {
+    const res = await fetch(`http://api.jon.netbuildertraining.com/chars/${dataID}`, {
         method: "DELETE",
     });
     if (!res.ok) {
@@ -64,7 +64,7 @@ export async function createCharsData(
     console.log("body", body);
     const jsonbody = JSON.stringify(body)
     console.log(jsonbody + "JSON BODY")
-    const res = await fetch(`http://localhost:8080/chars/`, {
+    const res = await fetch(`http://api.jon.netbuildertraining.com/chars/`, {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
